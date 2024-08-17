@@ -1,0 +1,12 @@
+# Ignore idea foldeer
+
+.idea
+
+# ignore target folder
+.target
+
+# ignore iml files
+*.iml
+
+dependency-reduced-pom.xml
+
