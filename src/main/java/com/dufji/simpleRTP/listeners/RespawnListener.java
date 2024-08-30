@@ -46,8 +46,9 @@ public class RespawnListener implements Listener {
         if (!event.isBedSpawn()
                 && config.getBoolean("rtpOn.respawn")) {
 
+
             // Teleport the player to a random location
-            player.teleportAsync(LocationUtils.generateLocation(this.plugin, player.getWorld())).thenAccept(
+            player.teleportAsync(LocationUtils.generateLocation(this.plugin, Objects.requireNonNull(plugin.getServer().getWorld("world")))).thenAccept(
                     (result) -> {
                         // If the title message is enabled
                         if (config.getBoolean("message.deathTitle.enabled"))
